@@ -4,7 +4,7 @@ import report_info
 if __name__=='__main__':
     id = os.environ["STUDENT_ID"]
     server_key= os.environ["SCKEY"]
-    my_pwd = os.environ["PWD"]
+    my_pwd = os.environ["PWD_KEY"]
     
     if(my_pwd=='abcabc'):
         print('hhh')
