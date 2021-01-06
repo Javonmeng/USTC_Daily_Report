@@ -11,7 +11,8 @@ if __name__=='__main__':
     print('test')
     if(id=='SA18006061'):
         print('qqq')
-    
+    if(password=='970415'):
+        print('www')
     sess,my_token=report_info.login(id,password)
 
     info_name,info_success,info_time=report_info.report(sess,my_token)
