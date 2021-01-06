@@ -24,7 +24,7 @@ jobs:
       - name: Run
         env:
           SCKEY: ${{ secrets.SCKEY }}
-          PWD: ${{ secrets.PWD}}
+          PWD_KEY: ${{ secrets.PWD_KEY}}
           STUDENT_ID: ${{ secrets.STUDENT_ID}}
           
         run: python main.py
