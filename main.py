@@ -2,14 +2,14 @@ import os
 import requests
 import report_info
 if __name__=='__main__':
-    ID = os.environ["STUDENT_ID"]
+    id = os.environ["STUDENT_ID"]
     password = os.environ["PWD"]
     server_key= os.environ["SCKEY"]
     
     print('test')
-    print(ID)
+    print(id)
     print('test')
-    if(ID=='SA18006061'):
+    if(id=='SA18006061'):
         print('qqq')
     
     sess,my_token=report_info.login(ID,password)
