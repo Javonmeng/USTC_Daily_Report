@@ -2,13 +2,10 @@ import os
 import requests
 import report_info
 if __name__=='__main__':
-    #STUDENT_ID = os.environ["STUDENT_ID"]
-    #PWD = os.environ["PWD"]
-    #SCKEY= os.environ["SCKEY"]
-    
-    STUDENT_ID='SA18006061'
-    PWD='970415'
-    SCKEY='SCU125687Tdfcc4d3426aefadf4eb9f077c27cf9455fabadb938ad7'
+    STUDENT_ID = os.environ["STUDENT_ID"]
+    PWD = os.environ["PWD"]
+    SCKEY= os.environ["SCKEY"]
+
     sess,my_token=report_info.login(STUDENT_ID,PWD)
 
     info_name,info_success,info_time=report_info.report(sess,my_token)
