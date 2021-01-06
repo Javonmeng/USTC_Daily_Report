@@ -5,7 +5,11 @@ if __name__=='__main__':
     ID = os.environ["STUDENT_ID"]
     password = os.environ["PWD"]
     server_key= os.environ["SCKEY"]
-
+    
+    print('test')
+    print(ID)
+    print('test')
+    
     sess,my_token=report_info.login(ID,password)
 
     info_name,info_success,info_time=report_info.report(sess,my_token)
