@@ -5,7 +5,7 @@ if __name__=='__main__':
     STUDENT_ID = os.environ["STUDENT_ID"]
     PWD = os.environ["PWD"]
     SCKEY= os.environ["SCKEY"]
-    
+    print(STUDENT_ID,PWD)
     sess,my_token=report_info.login(STUDENT_ID,PWD)
 
     info_name,info_success,info_time=report_info.report(sess,my_token)
