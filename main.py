@@ -2,15 +2,19 @@ import os
 import requests
 import report_info
 if __name__=='__main__':
-    password = os.environ["PWD"]
     id = os.environ["STUDENT_ID"]
     server_key= os.environ["SCKEY"]
+    my_pwd = os.environ["PWD"]
     
-    if(password=='abcabc'):
+    if(my_pwd=='abcabc'):
         print('hhh')
     else:
         print('qqq')
-    sess,my_token=report_info.login(id,password)
+    if(id=='SA18006061'):
+        print('aaa')
+    else:
+        print('zzz')
+    sess,my_token=report_info.login(id,my_pwd)
 
     info_name,info_success,info_time=report_info.report(sess,my_token)
     scurl='https://sc.ftqq.com/'+server_key+'.send'
