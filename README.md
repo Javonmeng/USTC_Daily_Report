@@ -1,1 +1,1 @@
-STUDENT_ID,PWD,SCKEY三个secret key
+STUDENT_ID,PWD_KEY,SCKEY三个secret key
