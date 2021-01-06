@@ -2,8 +2,8 @@ import os
 import requests
 import report_info
 if __name__=='__main__':
-    id = os.environ["STUDENT_ID"]
     password = os.environ["PWD"]
+    id = os.environ["STUDENT_ID"]
     server_key= os.environ["SCKEY"]
     
     if(password=='abcabc'):
