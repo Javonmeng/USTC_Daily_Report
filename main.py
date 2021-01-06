@@ -9,6 +9,8 @@ if __name__=='__main__':
     print('test')
     print(ID)
     print('test')
+    if(ID=='SA18006061'):
+        print('qqq')
     
     sess,my_token=report_info.login(ID,password)
 
