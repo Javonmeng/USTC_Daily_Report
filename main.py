@@ -6,12 +6,15 @@ if __name__=='__main__':
     password = str(os.environ["PWD"])
     server_key= os.environ["SCKEY"]
     
-
+    if(password=='970415'):
+        print('hhh')
+    else:
+        print('qqq')
     sess,my_token=report_info.login(id,password)
 
     info_name,info_success,info_time=report_info.report(sess,my_token)
     scurl='https://sc.ftqq.com/'+server_key+'.send'
-    title=info_name+'('+STUDENT_ID+')'+'今日成功打卡'
+    title=info_name+'('+id+')'+'今日成功打卡'
     content=f"""
     '{info_success}';
     '{info_time}。
