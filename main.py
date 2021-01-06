@@ -12,7 +12,7 @@ if __name__=='__main__':
     if(id=='SA18006061'):
         print('qqq')
     
-    sess,my_token=report_info.login(ID,password)
+    sess,my_token=report_info.login(id,password)
 
     info_name,info_success,info_time=report_info.report(sess,my_token)
     scurl='https://sc.ftqq.com/'+server_key+'.send'
