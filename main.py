@@ -2,14 +2,14 @@ import os
 import requests
 import report_info
 if __name__=='__main__':
-    STUDENT_ID = os.environ["STUDENT_ID"]
-    PWD = os.environ["PWD"]
-    SCKEY= os.environ["SCKEY"]
+    ID = os.environ["STUDENT_ID"]
+    password = os.environ["PWD"]
+    server_key= os.environ["SCKEY"]
 
-    sess,my_token=report_info.login(STUDENT_ID,PWD)
+    sess,my_token=report_info.login(ID,password)
 
     info_name,info_success,info_time=report_info.report(sess,my_token)
-    scurl='https://sc.ftqq.com/'+SCKEY+'.send'
+    scurl='https://sc.ftqq.com/'+server_key+'.send'
     title=info_name+'('+STUDENT_ID+')'+'今日成功打卡'
     content=f"""
     '{info_success}';
