@@ -2,23 +2,16 @@ import os
 import requests
 import report_info
 if __name__=='__main__':
-    id = os.environ["STUDENT_ID"]
-    server_key= os.environ["SCKEY"]
-    my_pwd = os.environ["PWD_KEY"]
+    STUDENT_ID = os.environ["STUDENT_ID"]
+    SCKEY= os.environ["SCKEY"]
+    PWD_KEY = os.environ["PWD_KEY"]
     
-    if(my_pwd=='abcabc'):
-        print('hhh')
-    else:
-        print('qqq')
-    if(id=='SA18006061'):
-        print('aaa')
-    else:
-        print('zzz')
-    sess,my_token=report_info.login(id,my_pwd)
+
+    sess,my_token=report_info.login(STUDENT_ID,PWD_KEY)
 
     info_name,info_success,info_time=report_info.report(sess,my_token)
-    scurl='https://sc.ftqq.com/'+server_key+'.send'
-    title=info_name+'('+id+')'+'今日成功打卡'
+    scurl='https://sc.ftqq.com/'+SCKEY+'.send'
+    title=info_name+'('+STUDENT_ID+')'+'今日成功打卡'
     content=f"""
     '{info_success}';
     '{info_time}。
