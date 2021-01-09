@@ -3,7 +3,7 @@ name: GitHub Actions Daily Report Bot
 on:
   workflow_dispatch: # 手动触发
   schedule:
-    - cron: 0 8 * * *
+    - cron: 0 0 * * *
     # cron表达式，时区是UTC时间，比我们早8小时，
     
 
