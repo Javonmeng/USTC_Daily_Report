@@ -44,7 +44,7 @@ def login(STUDENT_ID,PWD):
         #提取input标签中名为auth的值
         #auth = html.xpath('//input[@name="auth"]/@value')
         # 提取_token值
-        print(doc.xpath('//input[@name="_token"]/@value'))
+        print(doc.xpath('//input[@name="xuegonghao"]/@value'))
         my_token=doc.xpath('//input[@name="_token"]/@value')[0]
     return sess,my_token
 
