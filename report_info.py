@@ -9,7 +9,9 @@ header={
 }
 login_post_data = {
     'model': 'uplogin.jsp',
-    'service': '',
+    'service': 'https://weixine.ustc.edu.cn/2020/caslogin',
+    'warn':'',
+    'showCode':'',
     'username': '',
     'password': '',
     'button':''
