@@ -20,11 +20,12 @@ report_post_data = {
     '_token' : '',
     'now_address' : '1',
     'gps_now_address' : '',
-    'now_province' : '140000',
+    'now_province' : '340000',
     'gps_province' : '',
-    'now_city' : '140600',
+    'now_city' : '340100',
     'gps_city' : '',
     'now_detail' : '',
+    'is_inschool' : '0',
     'body_condition' : '1',
     'body_condition_detail' :'',
     'now_status' : '2',
@@ -46,10 +47,10 @@ def login(STUDENT_ID,PWD):
         #提取input标签中名为auth的值
         #auth = html.xpath('//input[@name="auth"]/@value')
         # 提取_token值
-        print(html)
-        print(doc.xpath('//input'))
-        info_name=doc.xpath('//input[@name="name"]/@value')[0]
-        print("111",info_name)
+        #print(html)
+        #print(doc.xpath('//input'))
+        #info_name=doc.xpath('//input[@name="name"]/@value')[0]
+        #print("111",info_name)
         my_token=doc.xpath('//input[@name="_token"]/@value')[0]
     return sess,my_token
 
